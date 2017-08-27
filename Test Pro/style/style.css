@@ -1,0 +1,57 @@
+body {
+	background-color:#000;
+}
+
+.block {
+	position:relative;
+	width:500px;
+	height:500px;
+	margin:0 auto;
+	background-color:#000;
+	
+}
+
+.block::before {
+	display:block;
+	content:'';
+	position:absolute;
+	width:500px;
+	height:140px;
+	top:-140px;
+	background-image:url(../images/basket.jpg);
+		
+}
+.block::after {
+	display:block;
+	content:'';
+	position:absolute;
+	width:500px;
+	height:89px;
+	top:500px;
+	background-image:url(../images/basketball_field.jpg);
+		
+}
+
+.ball {
+	margin:113px auto;
+	width:100px;
+	height:100px;
+	background-image:url(../images/ballBlack.jpg);
+	animation:move 2s ease-in infinite alternate 1s;
+}
+
+@keyframes move {
+	0% {
+		transform:translate(0,0px);
+	}
+	
+		
+	96% {
+		transform:translate(0,396px);
+	}
+	
+	100% {
+		transform:translate(0,404px) scale(1.1,.6);
+	}
+}
+
